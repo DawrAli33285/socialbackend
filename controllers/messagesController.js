@@ -25,7 +25,8 @@ module.exports.getCreators = async (req, res) => {
         let uniqueCreatorsAndMessages = Array.from(uniqueItems.values());
 
         res.status(200).json({
-            creators: uniqueCreatorsAndMessages
+            creators: uniqueCreatorsAndMessages,
+            messages:messagesRecord
         });
     } catch (e) {
         console.log(e.message);

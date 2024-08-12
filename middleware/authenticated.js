@@ -8,6 +8,7 @@ if(req.headers.authorization.includes('Bearer')){
     if(token){
         let user=jwt.verify(token,process.env.JWT_TOKEN)
     req.user=user;
+ 
     next();
     
     }

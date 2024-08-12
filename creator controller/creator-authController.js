@@ -45,6 +45,7 @@ module.exports.creatorlogin=async(req,res)=>{
 
 
 module.exports.register=async(req,res)=>{
+
     try{
 const {name,email,password,tagOne,tagTwo,tagThree,introduction}=req.body;
 console.log(name)

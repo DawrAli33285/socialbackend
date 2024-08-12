@@ -2,6 +2,7 @@ const userModel=require('../models/usermodel')
 const postModel=require('../creator models/post')
 const subscriptionModel=require('../models/subscriptionmodel')
 module.exports.getPosts=async(req,res)=>{
+   
     try{
         const userId = req?.user?.alreadyexists?._id;
         let user=await userModel.findOne({_id:userId});

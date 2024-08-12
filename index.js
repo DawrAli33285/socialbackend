@@ -447,7 +447,7 @@ socket.on('currentchatuser',(data)=>{
 //notifications
 socket.on('socketnotification',(data)=>{
   console.log('socketnotification')
-
+console.log(data)
   let usersocketid=connectedUsers?.find(u=>u?.id==data?.user)
   io.to(usersocketid?.socketid).emit('socketnotification',data)
   console.log(data)
